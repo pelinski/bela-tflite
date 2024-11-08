@@ -22,7 +22,7 @@ After our prerequisites are done, we can compile TFLite by starting up the docke
 docker buildx build --build-arg TF_VERSION=main --platform=linux/arm/v7 --progress=plain --output type=tar,dest=tflite-install.tar .
 ```
 
-This generates a `tflite-install.tar` file that contains all the filesystem from the docker image. The packaged installation is in `workspace/pytorch//pytorch-${TF_VERSION}.tar.gz`. To extract the compiled pytorch, run the following commands:
+This generates a `tflite-install.tar` file that contains all the filesystem from the docker image. The packaged installation is in `/workspace/tensorflow/tensorflow/lite/tflite-${TF_VERSION}.tar.gz`. To extract the compiled TFLite binary, run the following commands:
 
 ```bash
 source TF_VERSION.env
