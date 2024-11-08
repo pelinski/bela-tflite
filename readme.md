@@ -2,8 +2,6 @@
 
 This repository contains a Dockerfile that builds TFLite for armv7. Instead of cross-compiling with a CMake toolchain, we build TFLite "natively" in armv7 using the `multiarch/qemu-user-static` docker image to emulate an armv7 environment.
 
-Note: I tried adding CI with Github Actions, but since the build takes over 6h, it gets killed even when using Docker cache, so the docker build has to be run locally.
-
 ## Building TFLite for armv7
 
 You will need to have Docker installed and running. You can install it following the instructions on the [Docker website](https://docs.docker.com/get-docker/).
