@@ -18,7 +18,7 @@ sudo apt install binfmt-support qemu qemu-user-static
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 ```
 
-After our prerequisites are done, we can compile TFLite by starting up the docker build process. Be aware that it might take ~5h to compile. You can set the `TFLITE_VERSION` build argument to the version of TFLite you want to build. The default is `main`.
+After our prerequisites are done, we can compile TFLite by starting up the docker build process. Be aware that it might take ~5h to compile. You can set the `TF_VERSION` build argument to the version of TFLite you want to build. The default is `main`.
 
 ```bash
 docker buildx build --build-arg TF_VERSION=main --platform=linux/arm/v7 --progress=plain --output type=tar,dest=tflite-install.tar .
