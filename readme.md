@@ -22,7 +22,7 @@ After our prerequisites are done, we can compile TFLite by starting up the docke
 docker buildx build --build-arg TF_VERSION=main --platform=linux/arm/v7 --progress=plain --output type=tar,dest=tflite-install.tar .
 ```
 
-This generates a `tflite-install.tar` file that contains all the filesystem from the docker image. The packaged installation is in `/workspace/tensorflow/tensorflow/lite/tflite-${TF_VERSION}.tar.gz`. To extract the compiled TFLite binary, run the following commands:
+This generates a `tflite-install.tar` file that contains all the filesystem from the docker image. The packaged installation is in `/workspace/tensorflow/tensorflow/lite/tflite-${TF_VERSION}.tar.gz`. To extract the built TFLite install, run the following commands:
 
 ```bash
 source TF_VERSION.env
@@ -38,7 +38,7 @@ NOTE: If you have a good computer you can try speed up the build modifying the `
 ## Also check
 
 - [pybela-pytorch-xcompilation tutorial](https://github.com/pelinski/pybela-pytorch-xc-tutorial) - Tutorial on how integrate and crosscompile pytorch code for Bela
-- [bela-torch](https://github.com/pelinski/bela-torch) - Build torch for Bela using Docker (+ precompiled binaries)
+- [bela-torch](https://github.com/pelinski/bela-torch) - Build torch for Bela using Docker
 
 ## Credits
 
